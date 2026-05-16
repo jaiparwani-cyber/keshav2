@@ -1,0 +1,55 @@
+{% extends "layout.njk" %}
+{% set footerMargin = true %}
+
+{% block content %}
+  <section class="page-banner text-white d-flex align-items-center" style="min-height:36vh;">
+    <div class="container text-center">
+      <h1 class="display-5 fw-bold">Menu & Services</h1>
+      <p class="lead text-white-50">Nutritious meals and modern cafeteria services.</p>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        {% for meal in [
+          { badge: "Breakfast", title: "Breakfast", body: "Idli, dosa, fruits and beverages.", price: "&#8377;40" },
+          { badge: "Lunch", title: "Lunch", body: "Rice, dal, vegetables and sides.", price: "&#8377;80" },
+          { badge: "Snacks", title: "Snacks", body: "Sandwiches, samosa, juice.", price: "&#8377;30" },
+          { badge: "Dinner", title: "Dinner", body: "Rice bowls, curries, chapati.", price: "&#8377;70" }
+        ] %}
+          <div class="col-lg-3 col-md-6">
+            <div class="card h-100 border-0 shadow-sm overflow-hidden p-4">
+              <span class="badge bg-secondary mb-3">{{ meal.badge }}</span>
+              <h5 class="fw-bold">{{ meal.title }}</h5>
+              <p class="mb-0 text-muted">{{ meal.body }}</p>
+              <div class="mt-3 text-primary fw-bold">{{ meal.price }}</div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Mess Services</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="service-box p-4 bg-white shadow rounded-4 h-100">
+            <h5 class="fw-bold">Smart Card Entry</h5>
+            <p class="mb-0 text-muted">Fast access using student smart ID cards.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-box p-4 bg-white shadow rounded-4 h-100">
+            <h5 class="fw-bold">Digital Feedback</h5>
+            <p class="mb-0 text-muted">Students can report quality issues instantly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

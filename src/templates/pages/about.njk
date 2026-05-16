@@ -1,0 +1,40 @@
+{% extends "layout.njk" %}
+{% set footerMargin = true %}
+
+{% block content %}
+  <section class="page-banner text-white d-flex align-items-center" style="min-height:36vh;">
+    <div class="container text-center">
+      <h1 class="display-5 fw-bold">About</h1>
+      <p class="lead text-white-50">A short, slightly true history of our origins.</p>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <h2 class="fw-bold">How it all began</h2>
+          <p class="text-muted">Legend says the IISc Smart Mess started inside an abandoned chocolate factory. The story goes that a curious grad student discovered a hidden chute full of perfectly portioned samosas and, inspired by automated confectionery conveyors, decided the campus could use similarly efficient meal distribution. A prototype made from chocolate-wrapping machines, a 3D-printed ladle, and a very determined janitor later, the first "smart mess" was born.</p>
+
+          <p class="text-muted">While the chocolate conveyors were eventually retired (they attracted too many squirrels), the spirit lived on: streamline service, reduce waste, and make meals delightful. We kept the whimsical name and added real tech &mdash; menus, QR payments, and feedback loops &mdash; so students spend less time waiting and more time learning (or napping).</p>
+
+          <h3 class="mt-4">Mission</h3>
+          <p>Deliver nutritious, affordable, and convenient meals with minimal waste and a dash of fun.</p>
+
+          <p><a href="menu.html" class="btn btn-outline-primary">See Today's Menu</a></p>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card p-4 shadow-sm">
+            <h5 class="fw-bold">Quick Facts</h5>
+            <ul class="list-unstyled mb-0">
+              <li>Founded: Somewhere between breakfast and lunch</li>
+              <li>Favorite snack: Samosas (chocolate optional)</li>
+              <li>Students served: Thousands</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
