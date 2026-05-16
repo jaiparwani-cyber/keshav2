@@ -66,6 +66,7 @@ function nunjucksPagesPlugin() {
 }
 
 export default defineConfig({
+  base: "./",
   plugins: [nunjucksPagesPlugin()],
   root: __dirname,
   build: {
